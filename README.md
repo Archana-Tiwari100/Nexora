@@ -1,73 +1,183 @@
-# React + TypeScript + Vite
+# Nexora
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Nexora** is a smart productivity suite built with **React + Vite + TypeScript + Material UI**.  
+It combines multiple useful mini-apps into one elegant platform with a futuristic landing page and reusable architecture.
 
-Currently, two official plugins are available:
+## Live Modules
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. Resume Builder
+Create professional resumes with:
+- step-by-step form flow
+- live preview
+- multiple templates
+- PDF export
+- localStorage persistence
 
-## React Compiler
+### 2. Task Manager
+Manage daily work with:
+- add tasks
+- mark complete
+- filter tasks
+- clean dashboard UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 3. Voxa — Smart Voice Reminder
+A voice-powered reminder assistant with:
+- speaking reminders
+- voice preview
+- snooze for 5 minutes
+- browser notifications
+- repeat modes (one-time / daily / weekly)
+- localStorage persistence
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React**
+- **Vite**
+- **TypeScript**
+- **Material UI**
+- **html2canvas**
+- **jsPDF**
+- **Web Speech API**
+- **Browser Notifications API**
+- **localStorage**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Project Structure
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+src/
+  components/
+    shared/
+      AppHeader.tsx
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+    LandingPage/
+      LandingPage.tsx
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    ResumeBuilder/
+      ResumeBuilder.tsx
+      StepperForm.tsx
+      TemplateSelector.tsx
+      forms/
+      preview/
+      hooks/
+      types/
+
+    TaskManager/
+      TaskManager.tsx
+      Home.tsx
+      Footer.tsx
+      ...
+
+    VoiceReminder/
+      VoiceReminder.tsx
+      ReminderForm.tsx
+      ReminderList.tsx
+      types.ts
+
+  App.tsx
+  
+  Features
+Nexora Platform
+    futuristic landing page
+    multi-project navigation
+    reusable shared header
+    scalable structure for future modules
+Resume Builder
+    personal info, education, experience, skills, projects
+    live preview
+    classic / modern / minimal templates
+    export selected template as PDF
+    dynamic file naming from user name
+Task Manager
+    task input
+    completion toggle
+    task filtering
+    responsive dashboard layout
+Voxa
+    add reminder message and time
+    choose voice style
+    preview voice
+    automatic speech when time matches
+    snooze reminders
+    repeat reminders
+    browser notification support
+    delete reminders
+    localStorage persistence
+
+    Installation
+
+Clone the repository:
+
+git clone <your-repo-url>
+  cd nexora
+
+Install dependencies:
+
+  npm install
+
+Start development server:
+
+  npm run dev
+
+Build for production:
+
+  npm run build
+
+Preview production build:
+
+  npm run preview
+
+PDF Export Notes
+
+Resume Builder uses:
+
+html2canvas
+jsPDF
+
+The selected resume template is exported in the same visual style shown in preview.
+
+  Browser APIs Used
+  Web Speech API
+
+Used in Voxa to speak reminders aloud.
+
+Notifications API
+
+Used in Voxa to show browser notifications when reminders trigger.
+
+Branding
+
+Product Name: Nexora
+Tagline: Your Smart Productivity Suite
+
+Voice Reminder Module Name: Voxa
+
+Future Improvements
+
+Possible future modules and enhancements:
+
+expense tracker
+habit tracker
+AI planner
+better recurring reminder controls
+deployment branding improvements
+analytics dashboard
+Why This Project Matters
+
+Nexora is more than a single app.
+It demonstrates:
+
+reusable component architecture
+multi-module frontend structure
+modern UI design
+TypeScript-based component design
+integration with browser APIs
+real product-style user experience
+Author
+
+Built by Archana Tiwari
+
+Frontend project suite focused on modern UI, practical tools, and scalable architecture.
