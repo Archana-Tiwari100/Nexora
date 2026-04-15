@@ -3,6 +3,11 @@
 **Nexora** is a smart productivity suite built with **React, Vite, TypeScript, and Material UI**.  
 It combines multiple useful mini-apps into one elegant platform with a futuristic UI and scalable architecture.
 
+## 🌐 Live Demo
+
+👉 **Try Nexora here:**  
+🔗 https://nexora-coral-iota.vercel.app/
+
 ---
 
 ## 🌟 Live Modules
